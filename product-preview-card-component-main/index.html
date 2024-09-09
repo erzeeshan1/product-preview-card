@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+    <title>Frontend Mentor | Product preview card component</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            --Darkcyan: hsl(158, 36%, 37%);
+            --Cream: hsl(30, 38%, 92%);
+            --Verydarkblue: hsl(212, 21%, 14%);
+            --Darkgrayishblue: hsl(228, 12%, 48%);
+            --White: hsl(0, 0%, 100%);
+        }
+
+        body {
+            background-color: var(--Cream);
+            font-family: "Fraunces", serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .maincontainer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            padding: 1rem;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            background-color: var(--White);
+            border-radius: 1rem;
+            max-width: 600px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .image img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .content {
+            background-color: var(--White);
+            width: 100%;
+            height: auto;
+        }
+
+        .content h6 {
+            color: var(--Darkgrayishblue);
+            font-size: 0.9rem;
+            letter-spacing: 0.3rem;
+            margin-left: 1.5rem;
+        }
+
+        .content h1 {
+            color: var(--Verydarkblue);
+            font-size: 1.5rem;
+            margin: 0.5rem 1.5rem;
+        }
+
+        .content p {
+            color: var(--Darkgrayishblue);
+            font-size: 0.95rem;
+            margin: 1rem 1.5rem;
+        }
+
+        .price {
+            display: flex;
+            align-items: center;
+            margin-left: 1.5rem;
+        }
+
+        .price h2 {
+            color: var(--Darkcyan);
+            margin-right: -1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .price p s {
+            color: var(--Darkgrayishblue);
+        }
+
+        .cart {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--Darkcyan);
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            text-align: center;
+            margin-left: 1.5rem;
+            margin-right: 1.5rem;
+        }
+
+        .cart img {
+            height: 1.2rem;
+            margin-right: 0.5rem;
+        }
+
+        .cart p {
+            color: var(--White);
+            margin: 0;
+            font-size: 1rem;
+        }
+
+        .cart a {
+            text-decoration: none;
+        }
+
+        .attribution {
+            font-size: 11px;
+            text-align: center;
+            margin-top: 1rem;
+
+        }
+
+        .attribution a {
+            color: hsl(228, 45%, 44%);
+        }
+
+        /* Media Queries for responsiveness */
+        @media (max-width: 600px) {
+            .container {
+                flex-direction: column;
+                max-width: 375px;
+                margin-top: 10rem;
+                margin-bottom: 2rem;
+            }
+
+            .image img {
+                width: 100%;
+                height: 20rem;
+                border-radius: 1rem 1rem 0 0;
+                /* margin-top: 10rem; */
+            }
+
+            .content {
+                padding: 1rem;
+            }
+
+            .content h1 {
+                font-size: 1.3rem;
+            }
+
+            .content p {
+                font-size: 0.85rem;
+            }
+
+            .price h2 {
+                font-size: 1.2rem;
+            }
+
+            .cart {
+                padding: 0.6rem;
+                margin-bottom: 1rem;
+            }
+
+            .cart p {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="maincontainer">
+        <div class="container">
+            <div class="image">
+                <img src="images/image-product-desktop.jpg" alt="Product image">
+            </div>
+            <div class="content">
+                <h6>Perfume</h6>
+                <h1>Gabrielle Essence Eau De Parfum</h1>
+                <p>A floral, solar and voluptuous interpretation composed by Olivier Polge, Perfumer-Creator for the
+                    House of CHANEL.</p>
+                <div class="price">
+                    <h2>$149.99</h2>
+                    <p><s>$169.99</s></p>
+                </div>
+                <div class="cart">
+                    <img src="images/icon-cart.svg" alt="Cart icon">
+                    <a href="#">
+                        <p>Add to Cart</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
